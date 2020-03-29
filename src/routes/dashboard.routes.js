@@ -1,12 +1,12 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { AntDesign, FontAwesome } from "@expo/vector-icons";
+import { AntDesign, FontAwesome, Ionicons } from "@expo/vector-icons";
 
 import Home from '../pages/Home';
-import Search from '../pages/Search';
 import Setting from '../pages/Setting';
 import Message from '../pages/Message';
 import Create from '../pages/Create';
+import Search from '../pages/Search';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -19,7 +19,7 @@ export default function dashboardRoutes() {
                     <AntDesign name="home" color="#424242" size={24}/>
                 ),
             }} />
-            <Tab.Screen name="Search" component={Search} options={{
+            <Tab.Screen name="Search" component={Search} navigationOptions={{headerVisible: false}} options={{
                 tabBarLabel: "Pesquisar",
                 tabBarIcon: () => (
                     <AntDesign name="search1" color="#424242" size={24}/>
@@ -28,7 +28,7 @@ export default function dashboardRoutes() {
             <Tab.Screen name="Create" component={Create} options={{
                 tabBarLabel: "Criar",
                 tabBarIcon: () => (
-                    <AntDesign name="pluscircleo" color="#424242" size={24}/>
+                    <Ionicons name="ios-create" color="#424242" size={24}/>
                 ),
             }} />
             <Tab.Screen name="Message" component={Message} options={{

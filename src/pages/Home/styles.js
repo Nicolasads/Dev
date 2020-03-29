@@ -2,18 +2,34 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     container: {
-        flex: 1,
         paddingHorizontal: 12,
-        paddingTop: 15,
+    },
+    header: {
+        position: "absolute",
+        left: 0,
+        right: 0,
+        top: 0,
+        height: 70,
+        backgroundColor: "#7159c1",
+        zIndex: 1000,
+        elevation: 1000,
+    },  
+    titlebar: {
+        color: '#fff',
+        marginTop: 35,
+        textAlign: 'center',
+        fontWeight: '700',
+        fontSize: 20,
     },
     flatlist: {
-        marginTop: 8,
+        marginTop: 70,
     },
     feedList: {
-        padding: 10,
+        paddingHorizontal: 12,
+        marginTop: 20,
         borderRadius: 10,
         backgroundColor: '#fff',
-        marginBottom: 16,
+        height: 550,
     },
     title: {
         flexDirection: 'row',
